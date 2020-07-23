@@ -242,3 +242,6 @@ disable_group_policy_check_upcall = true
 # info updates to the scheduler, so just disable it.
 track_instance_changes = false
 {% endif %}
+
+[pci]
+passthrough_whitelist = {{ nova_pci_passthrough_whitelist }}
