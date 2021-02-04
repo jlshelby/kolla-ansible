@@ -27,6 +27,8 @@ metadata_proxy_socket = /var/lib/neutron/kolla/metadata_proxy
 interface_driver = openvswitch
 {% elif neutron_plugin_agent == "linuxbridge" %}
 interface_driver = linuxbridge
+{% elif neutron_plugin_agent == "ovn" %}
+interface_driver = neutron.agent.linux.interface.OVSInterfaceDriver
 {% endif %}
 
 {% if enable_nova_fake | bool %}
